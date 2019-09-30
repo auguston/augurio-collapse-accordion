@@ -1,0 +1,48 @@
+*, *::before, *::after
+  box-sizing: border-box
+
+.augurio-collapse
+
+  .title-box, .contents-box
+    border: 1px solid #CCC
+  .title-box, .contents
+    padding: 12px
+  
+  // collapse title
+  .title-box
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    cursor: pointer
+
+    // icons transform active
+    &.active .icons
+      span
+        &:first-of-type
+          transform: rotate(180deg)
+        &:last-of-type
+          transform: rotate(0) translateY(-2px)
+  
+  .icons
+    position: absolute
+    right: 12px
+    span
+      display: block
+      width: 12px
+      height: 2px
+      background-color: #000
+      transition: transform .2s ease
+      &:last-of-type
+        transform: rotate(90deg) translateX(-2px)
+
+  // collapse contents
+  .contents-box
+    overflow: hidden
+    border-top: none
+    border-bottom: none
+    transition: height .3s ease
+    
+  .collapse
+    &:last-of-type .contents-box
+      border-bottom: 1px solid #CCC

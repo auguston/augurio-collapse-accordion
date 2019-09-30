@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>用原生JS做一個簡單的手風琴Accordion/Collapse功能 - Augustus - Let's Write</title>
+    <link rel="canonical" href="https://auguston.github.io/js-collapse-accordion/"/>
+    <meta property="og:url" content="https://auguston.github.io/js-collapse-accordion/"/>
+    <meta property="og:site_name" content="Let's Write"/>
+    <meta property="og:title" content="Augurio Collapse/Accordion - Augustus - Let's Write"/>
+    <meta itemprop="name" content="Augurio Collapse/Accordion - Augustus - Let's Write"/>
+    <meta name="description" content="由Augustus開發的Collapse/Accordion，用原生JS製作。"/>
+    <meta property="og:description" content="由Augustus開發的Collapse/Accordion，用原生JS製作。"/>
+    <meta itemprop="description" content="由Augustus開發的Collapse/Accordion，用原生JS製作。"/>
+    <meta itemprop="image" content="https://auguston.github.io/js-collapse-accordion/fb.jpg"/>
+    <meta property="og:image" content="https://auguston.github.io/js-collapse-accordion/fb.jpg"/>
+    <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="augurio-collapse.css"/>
+    <style>
+      body {
+        background: #F5F5F5;
+      }
+      .container {
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 10vh;
+        width: 100%;
+        max-width: 480px;
+      }
+      h1 {
+        line-height: 1.5;
+        font-size: 22px;
+      }
+      h2 {
+        font-weight: normal;
+        font-size: 18px;
+      }
+      a {
+        color: #00BAFF;
+      }
+      a:hover {
+        color: #008BBF;
+      }
+      .divider {
+        margin: 5vh auto;
+        height: 0;
+        border: 0;
+        border-top: 1px solid #CCC;
+      }
+      .augurio-collapse {
+        background: #FFF;
+      }
+      @media screen and (max-width: 480px){
+        .container {
+          padding-right: 12px;
+          padding-left: 12px;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-74398300-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-74398300-1');
+      
+    </script>
+    <div class="container">
+      <h1>用原生JS<br/>做一個簡單的手風琴Accordion/Collapse功能</h1>
+      <h2>筆記文：<a href="https://letswrite.tw/js-collapse-accordion/" target="_blank">Let's Write</a></h2>
+      <hr class="divider"/>
+      <section class="augurio-collapse">
+        <!-- 一個 .collapse 是一組-->
+        <div class="collapse">
+          <!-- title-->
+          <div class="title-box">
+            <div class="title">collapse-title-1</div>
+            <div class="icons"><span></span><span></span></div>
+          </div>
+          <!-- contents-->
+          <div class="contents-box">
+            <div class="contents">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ducimus, illum vitae nam officia quidem iste maxime provident! Temporibus repellat nulla blanditiis at accusamus minima delectus aut doloribus officia deserunt.</p>
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="title-box">
+            <div class="title">collapse-title-2</div>
+            <div class="icons"><span></span><span></span></div>
+          </div>
+          <div class="contents-box">
+            <div class="contents">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ducimus, illum vitae nam officia quidem iste maxime provident! Temporibus repellat nulla blanditiis at accusamus minima delectus aut doloribus officia deserunt.</p>
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="title-box">
+            <div class="title">collapse-title-3</div>
+            <div class="icons"><span></span><span></span></div>
+          </div>
+          <div class="contents-box">
+            <div class="contents">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ducimus, illum vitae nam officia quidem iste maxime provident! Temporibus repellat nulla blanditiis at accusamus minima delectus aut doloribus officia deserunt.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="augurio-collapse.js"></script>
+  </body>
+</html>
