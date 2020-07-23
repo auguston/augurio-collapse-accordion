@@ -26,6 +26,11 @@ window.addEventListener('DOMContentLoaded', () => {
         content.setAttribute('style', 'height: 0');
       }
     });
+
+    // 如果 .title-box 有 data-expanded="true"，就預設開啟
+    if(t.dataset.expanded === 'true') {
+      t.click()
+    }
   });
 
 });
