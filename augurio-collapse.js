@@ -11,6 +11,14 @@ window.addEventListener('DOMContentLoaded', () => {
   const titles = document.querySelectorAll('.title-box');
   Array.prototype.forEach.call(titles, t => {
     t.addEventListener('click', e => {
+      
+      // 如果需要開啟一個就關閉前一個，就加入以下：
+      const active = document.querySelectorAll('.active');
+      Array.prototype.forEach.call(active, act => {
+        act.classList.remove('active');
+        act.parentNode.querySelector('.contents-box').setAttribute('style', 'height: 0');
+      })
+      
       e.target.classList.toggle('active'); // 加入/移除 .active
 
       // .title-box 同一層的 .contents-box
